@@ -1,0 +1,3 @@
+/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir
+/home/karmveer/.coding/tui/build/CMakeFiles/edit_cache.dir
+/home/karmveer/.coding/tui/build/CMakeFiles/rebuild_cache.dir
