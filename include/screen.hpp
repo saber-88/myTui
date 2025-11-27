@@ -10,9 +10,11 @@ namespace Tui {
         
         public:
         
-        Screen(bool altBuffer);
+        Screen();
         ~Screen();
         
+        void init(bool altBuffer);
+        void exit();
         void clear();                                                   // clear screen
         size_t getRows();                                               // get number of rows of terminal screen
         size_t getCols();                                               // get number of columns of terminal screen

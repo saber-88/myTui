@@ -18,6 +18,7 @@ namespace Tui {
             case FG::BrightYellow: return C::light_yellow;
             case FG::BrightBlue: return C::light_blue;
             case FG::BrightCyan: return C::light_cyan;
+            case FG::Default: return fmt::v12::color::white;
             default: return C::white;
         }
     }
@@ -37,7 +38,8 @@ namespace Tui {
             case BG::BrightYellow: return C::light_yellow;
             case BG::BrightBlue: return C::light_blue;
             case BG::BrightCyan: return C::light_cyan;
-            default: return C::black;
+            case BG::Default: return static_cast<C>(0);
+            default: return static_cast<C>(0);
         }
     }
     
@@ -54,11 +56,29 @@ namespace Tui {
     
     std::string Paint(const std::string& text , FG f , BG b , Style s) {
         
-        fmt::color fgColor = fg_to_fmt(f);
-        fmt::color bgColor = bg_to_fmt(b);
-        fmt::emphasis emp = style_to_fmt(s);
-        auto style = fmt::fg(fgColor) | fmt::bg(bgColor) | emp ;
-        return fmt::format("{}", fmt::styled(text, style));
+        if (b == Tui::BG::Default) {
+            fmt::color fgColor = fg_to_fmt(f);
+            fmt::emphasis emp = style_to_fmt(s);
+            
+            auto style = fmt::fg(fgColor) | emp;
+            return  fmt::format("{}", fmt::styled(text, style));
+        }
+        else if (f == Tui::FG::Default) {
+            fmt::color bgColor = bg_to_fmt(b);
+            fmt::emphasis emp = style_to_fmt(s);
+            
+            auto style = fmt::bg(bgColor) | emp;
+            return  fmt::format("{}", fmt::styled(text, style));
+        }
+        else {
+        
+            fmt::color fgColor = fg_to_fmt(f);
+            fmt::color bgColor = bg_to_fmt(b);
+            fmt::emphasis emp = style_to_fmt(s);
+            auto style = fmt::fg(fgColor) | fmt::bg(bgColor) | emp ;
+            return fmt::format("{}", fmt::styled(text, style));
+        }
+        
     }
 
     

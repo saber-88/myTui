@@ -2,6 +2,7 @@
 
 #include "colors.hpp"
 #include <string>
+
 struct Cell{
 
     std::string cellItem;

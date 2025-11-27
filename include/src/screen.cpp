@@ -38,7 +38,7 @@ void Tui::Screen::checkResize(){
     
 }
 
-Tui::Screen::Screen(bool altBuff) : m_altBuffer(altBuff){
+Tui::Screen::Screen(){
     
     updateSize();
     Cell defaultCell;
@@ -48,6 +48,20 @@ Tui::Screen::Screen(bool altBuff) : m_altBuffer(altBuff){
     
     frontBuffer.assign(m_rows * m_cols , defaultCell);
     backBuffer.assign(m_rows * m_cols , defaultCell);
+    
+}
+
+Tui::Screen::~Screen(){
+    if (m_initScreen && m_altBuffer) {
+        
+        tcsetattr(STDIN_FILENO, TCSANOW, &og_tio);
+        fmt::print("\x1b[?1049l");
+        
+    }
+}
+
+void Tui::Screen::init(bool altBuffer){
+    this->m_altBuffer = altBuffer;
     
     if (m_altBuffer) {
         
@@ -60,10 +74,9 @@ Tui::Screen::Screen(bool altBuff) : m_altBuffer(altBuff){
         fmt::print("\x1b[?1049h");
     }
     m_initScreen = true;
-    
 }
 
-Tui::Screen::~Screen(){
+void Tui::Screen::exit(){
     if (m_initScreen && m_altBuffer) {
         
         tcsetattr(STDIN_FILENO, TCSANOW, &og_tio);

@@ -13,9 +13,9 @@ include_directories(
 
 add_executable (tui
     src/main.cpp
-    src/include/screen.cpp
-    src/include/component.cpp
-    src/include/colors.cpp
+    include/src/screen.cpp
+    include/src/component.cpp
+    include/src/colors.cpp
 )
 
 target_link_libraries(tui PRIVATE fmt::fmt)

@@ -130,6 +130,9 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=TUI
 
 //Value Computed by CMake
+CMAKE_PROJECT_SPDX_LICENSE:STATIC=
+
+//Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0
 
 //Value Computed by CMake
@@ -262,9 +265,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/karmveer/.coding/tui/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=1
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/sbin/cmake
 //Path to cpack program executable.

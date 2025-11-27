@@ -2,11 +2,33 @@
 	"configurations" : 
 	[
 		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fmt::fmt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fmt__fmt-Debug-3f72bac93097472ac47f.json",
+					"name" : "fmt::fmt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fmt::fmt-header-only::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fmt__fmt-header-only-Debug-a2d5d9372add31921ca6.json",
+					"name" : "fmt::fmt-header-only",
+					"projectIndex" : 0
+				}
+			],
 			"directories" : 
 			[
 				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -23,6 +45,11 @@
 			"projects" : 
 			[
 				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
 					"directoryIndexes" : 
 					[
 						0
@@ -39,7 +66,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "tui::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tui-Debug-645ce7761f5909afe9cf.json",
+					"jsonFile" : "target-tui-Debug-014bf92b5310a1ec9da9.json",
 					"name" : "tui",
 					"projectIndex" : 0
 				}
@@ -55,6 +82,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 8
+		"minor" : 9
 	}
 }

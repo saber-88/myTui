@@ -7,20 +7,20 @@
 },
 {
   "directory": "/home/karmveer/.coding/tui/build",
-  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/src/include/screen.cpp.o -c /home/karmveer/.coding/tui/src/include/screen.cpp",
-  "file": "/home/karmveer/.coding/tui/src/include/screen.cpp",
-  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/src/include/screen.cpp.o"
+  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/include/src/screen.cpp.o -c /home/karmveer/.coding/tui/include/src/screen.cpp",
+  "file": "/home/karmveer/.coding/tui/include/src/screen.cpp",
+  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/include/src/screen.cpp.o"
 },
 {
   "directory": "/home/karmveer/.coding/tui/build",
-  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/src/include/component.cpp.o -c /home/karmveer/.coding/tui/src/include/component.cpp",
-  "file": "/home/karmveer/.coding/tui/src/include/component.cpp",
-  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/src/include/component.cpp.o"
+  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/include/src/component.cpp.o -c /home/karmveer/.coding/tui/include/src/component.cpp",
+  "file": "/home/karmveer/.coding/tui/include/src/component.cpp",
+  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/include/src/component.cpp.o"
 },
 {
   "directory": "/home/karmveer/.coding/tui/build",
-  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/src/include/colors.cpp.o -c /home/karmveer/.coding/tui/src/include/colors.cpp",
-  "file": "/home/karmveer/.coding/tui/src/include/colors.cpp",
-  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/src/include/colors.cpp.o"
+  "command": "/usr/sbin/g++ -DFMT_SHARED -I/home/karmveer/.coding/tui/include -g -std=gnu++20 -o CMakeFiles/tui.dir/include/src/colors.cpp.o -c /home/karmveer/.coding/tui/include/src/colors.cpp",
+  "file": "/home/karmveer/.coding/tui/include/src/colors.cpp",
+  "output": "/home/karmveer/.coding/tui/build/CMakeFiles/tui.dir/include/src/colors.cpp.o"
 }
 ]

@@ -22,10 +22,6 @@ namespace Tui {
             Text(const std::string& text, FG f , BG b , Style s);
             void drawText( Screen& s);
             
-            bool hasUnicode(const std::string& s);
-            size_t utf8CharLen(unsigned char c);
-            size_t countUtf8Chars(const std::string& s);
-
             private:
             size_t t_row , t_col;
             FG t_fg;
@@ -38,25 +34,30 @@ namespace Tui {
             
             public:
             
-            Box(size_t row , size_t col , size_t height , size_t width);
-            Box( size_t height , size_t width);
+            Box(size_t row , size_t col , size_t height , size_t width, FG f , BG b );
+            Box( size_t height , size_t width, FG f , BG b );
             
             void drawBox( Screen& s);
             
             private:
             size_t b_row , b_col , b_height , b_width;
+            FG b_fg;
+            BG b_bg;
+
         };
         class Square{
             
             public:
             
-            Square(size_t row , size_t col , size_t side );
-            Square( size_t side);
+            Square(size_t row , size_t col , size_t side , FG f , BG b );
+            Square( size_t side, FG f , BG b );
             
             void drawSquare( Screen& s);
             
             private:
             size_t s_row , s_col , s_side ;
+            FG s_fg;
+            BG s_bg;
         };
         
     };

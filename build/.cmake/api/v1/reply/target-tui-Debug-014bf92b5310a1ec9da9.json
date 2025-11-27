@@ -43,6 +43,18 @@
 			}
 		]
 	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "fmt::fmt::@6890427a1f51a3e7e1df"
+		}
+	],
 	"compileGroups" : 
 	[
 		{
@@ -101,6 +113,13 @@
 		],
 		"language" : "CXX"
 	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "fmt::fmt::@6890427a1f51a3e7e1df"
+		}
+	],
 	"name" : "tui",
 	"nameOnDisk" : "tui",
 	"paths" : 
@@ -132,19 +151,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/include/screen.cpp",
+			"path" : "include/src/screen.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/include/component.cpp",
+			"path" : "include/src/component.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/include/colors.cpp",
+			"path" : "include/src/colors.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
