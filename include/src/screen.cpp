@@ -1,10 +1,9 @@
 #include <cstddef>
-#include <cstdio>
+#include <ctime>
 #include <fmt/base.h>
 #include <fmt/color.h>
 #include <termios.h>
 #include <unistd.h>
-#include <vector>
 #include <sys/ioctl.h>
 
 #include "screen.hpp"
@@ -113,14 +112,12 @@ void Tui::Screen::render(){
                                 )
                             );
                 }
+                frontBuffer[idx] = backBuffer[idx];
             }
-            frontBuffer[idx] = backBuffer[idx];
         }
+        fflush(stdout);
     }
-    fflush(stdout);
 }
-
-
 
 size_t Tui::Screen::getRows(){
     return m_rows;

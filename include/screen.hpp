@@ -15,18 +15,19 @@ namespace Tui {
         
         void init(bool altBuffer);
         void exit();
-        void clear();                                                   // clear screen
-        size_t getRows();                                               // get number of rows of terminal screen
-        size_t getCols();                                               // get number of columns of terminal screen
+        void clear();                                                   
+        size_t getRows();
+        size_t getCols();
         void updateSize();
         void checkResize();
+
         std::vector<Cell>& getBackBuffer();
+
         void hideCursor();
         void showCursor();
         void clearScreen();
+        void render(size_t time);
         void render();
-        
-        
         
         private:
         

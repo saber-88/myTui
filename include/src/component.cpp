@@ -28,7 +28,6 @@ Tui::Component::Text::Text(const std::string& text , FG f , BG b , Style s)
 
 
 
-
 // --------------------------------------------
 // BOX CONSTRUCTORS
 // --------------------------------------------

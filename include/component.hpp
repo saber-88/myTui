@@ -13,7 +13,6 @@ namespace Tui {
         
         Component();
         
-        
         class Text{
             
             public:
