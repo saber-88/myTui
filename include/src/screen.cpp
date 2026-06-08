@@ -24,22 +24,7 @@ void Tui::Screen::updateSize(){
     
     m_rows = w.ws_row;
     m_cols = w.ws_col;
-}
 
-void Tui::Screen::checkResize(){
-    struct winsize w;
-    if (ioctl(STDOUT_FILENO, TIOCGWINSZ ,&w )) {
-        if (w.ws_row != m_rows || w.ws_col != m_cols) {
-            m_rows = w.ws_row;
-            m_cols = w.ws_col;
-        }
-    }
-    
-}
-
-Tui::Screen::Screen(){
-    
-    updateSize();
     Cell defaultCell;
     defaultCell.cellItem = "";
     defaultCell.fg = FG::Default;
@@ -47,7 +32,27 @@ Tui::Screen::Screen(){
     
     frontBuffer.assign(m_rows * m_cols , defaultCell);
     backBuffer.assign(m_rows * m_cols , defaultCell);
-    
+
+}
+
+void Tui::Screen::checkResize() {
+    struct winsize w;
+    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &w) == 0) {
+        if (w.ws_row != m_rows || w.ws_col != m_cols) {  // only if changed
+            m_rows = w.ws_row;
+            m_cols = w.ws_col;
+            Cell defaultCell;
+            defaultCell.cellItem = "";
+            defaultCell.fg = FG::Default;
+            defaultCell.bg = BG::Default;
+            frontBuffer.assign(m_rows * m_cols, defaultCell);
+            backBuffer.assign(m_rows * m_cols, defaultCell);
+        }
+    }
+}
+
+Tui::Screen::Screen(){
+    updateSize();
 }
 
 Tui::Screen::~Screen(){
@@ -115,8 +120,9 @@ void Tui::Screen::render(){
                 frontBuffer[idx] = backBuffer[idx];
             }
         }
-        fflush(stdout);
     }
+
+    fflush(stdout);
 }
 
 size_t Tui::Screen::getRows(){

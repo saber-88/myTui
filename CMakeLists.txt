@@ -20,5 +20,6 @@ add_executable (tui
 
 target_include_directories( tui PRIVATE
     include
+    include/src
 )
 target_link_libraries(tui PRIVATE fmt::fmt)
